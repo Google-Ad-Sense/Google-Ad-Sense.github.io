@@ -1,0 +1,16 @@
+{
+    "contact_email" : "google-ad-sense@googlegroups.com",
+    "contact_address" : "India",
+    "version" : "1.0",   
+    "sellers" : [
+        {
+            "seller_id" : "pub-7600374410956303",
+            "is_confidential" : 0,
+            "name" : "Prakhar Makhija",
+            "domain" : "google-ad-sense.github.io/",
+            "seller_type" : "PUBLISHER",
+            "is_passthrough" : 1,
+            "comment" : "Google AdSense for https://Google-Ad-Sense.GitHub.io/"
+        }
+    ]
+}
