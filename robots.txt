@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: README.md
+
+User-agent: *
+Allow: /
+
+Sitemap: https://Google-Ad-Sense.GitHub.io/sitemap.xml
