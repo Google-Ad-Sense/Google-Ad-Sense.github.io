@@ -21,7 +21,7 @@
         <meta property="og:image:type" content="image/svg+xml">
         <meta property="og:image:alt" content="Banner of Google Ad Sense">
         <link rel="icon" type="image/svg+xml" sizes="any" href="images/AdSense_Logo.svg">
-        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7600374410956303" crossorigin="anonymous"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7600374410956303" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -131,43 +131,52 @@
         </main>
 
         <script>
-            console.log("###################################################");
-            console.log("load ads");
-
-            let googleAdElements = document.getElementsByClassName("adsbygoogle");
-            console.log("Ad Elements Count : " + googleAdElements.length);
-            for (let elementIndex = 1; elementIndex < googleAdElements.length; elementIndex++) {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            }
-
-            console.log("###################################################");
-            console.log("load code snippets");
-
-            let codeElements = document.getElementsByTagName("code");
-            console.log("Code Elements Count : " + codeElements.length);
-
-            let codeSnippetBaseUrl = "https://raw.githubusercontent.com/Google-Ad-Sense/Google-Ad-Sense.github.io/main/snippet/";
-
-            for (let elementIndex = 1; elementIndex < codeElements.length; elementIndex++) {
-                let codeElement = codeElements[elementIndex];
-                let codeElementId = codeElement.id;
-                let codeSnippetFileUrl = codeSnippetBaseUrl + codeElementId;
+            funtion loadAds() {
 
                 console.log("###################################################");
-                console.log("load code snippet from url : " + codeSnippetFileUrl);
-
-                let codeSnippetFileHttpRequest = new XMLHttpRequest();
-                codeSnippetFileHttpRequest.onreadystatechange = function() {
-                    console.log("request state change -> (readyState) " + this.readyState + " (status) " + this.status);
-                    if (this.readyState == 4 && this.status == 200) {
-                        let codeSnippetFileContent = codeSnippetFileHttpRequest.responseText;
-                        console.log("code snippet content : " + codeSnippetFileContent);
-                        codeElement.innerHTML = codeSnippetFileContent;
-                    }
-                };
-                codeSnippetFileHttpRequest.open("GET", codeSnippetFileUrl, true);
-                codeSnippetFileHttpRequest.send();
+                console.log("load ads");
+    
+                let googleAdElements = document.getElementsByClassName("adsbygoogle");
+                console.log("Ad Elements Count : " + googleAdElements.length);
+                for (let elementIndex = 1; elementIndex < googleAdElements.length; elementIndex++) {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }
             }
+
+            funtion loadSnippets() {
+
+                console.log("###################################################");
+                console.log("load code snippets");
+    
+                let codeElements = document.getElementsByTagName("code");
+                console.log("Code Elements Count : " + codeElements.length);
+    
+                let codeSnippetBaseUrl = "https://raw.githubusercontent.com/Google-Ad-Sense/Google-Ad-Sense.github.io/main/snippet/";
+    
+                for (let elementIndex = 1; elementIndex < codeElements.length; elementIndex++) {
+                    let codeElement = codeElements[elementIndex];
+                    let codeElementId = codeElement.id;
+                    let codeSnippetFileUrl = codeSnippetBaseUrl + codeElementId;
+    
+                    console.log("###################################################");
+                    console.log("load code snippet from url : " + codeSnippetFileUrl);
+    
+                    let codeSnippetFileHttpRequest = new XMLHttpRequest();
+                    codeSnippetFileHttpRequest.onreadystatechange = function() {
+                        console.log("request state change -> (readyState) " + this.readyState + " (status) " + this.status);
+                        if (this.readyState == 4 && this.status == 200) {
+                            let codeSnippetFileContent = codeSnippetFileHttpRequest.responseText;
+                            console.log("code snippet content : " + codeSnippetFileContent);
+                            codeElement.innerHTML = codeSnippetFileContent;
+                        }
+                    };
+                    codeSnippetFileHttpRequest.open("GET", codeSnippetFileUrl, true);
+                    codeSnippetFileHttpRequest.send();
+                }
+            }
+
+            loadAds();
+            setTimeout(loadSnippets, 15000);
         </script>
 
         <footer>
