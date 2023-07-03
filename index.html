@@ -139,7 +139,11 @@
                 let googleAdElements = document.getElementsByClassName("adsbygoogle");
                 console.log("Ad Elements Count : " + googleAdElements.length);
                 for (let elementIndex = 1; elementIndex < googleAdElements.length; elementIndex++) {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.log(e);
+                    }
                 }
             }
 
