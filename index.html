@@ -131,23 +131,29 @@
         </main>
 
         <script>
-            funtion loadAds() {
+            function loadAd() {
+
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+
+            function loadAds() {
 
                 console.log("###################################################");
                 console.log("load ads");
     
                 let googleAdElements = document.getElementsByClassName("adsbygoogle");
                 console.log("Ad Elements Count : " + googleAdElements.length);
+
                 for (let elementIndex = 1; elementIndex < googleAdElements.length; elementIndex++) {
                     try {
-                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        loadAd();
                     } catch (e) {
                         console.log(e);
                     }
                 }
             }
 
-            funtion loadSnippets() {
+            function loadSnippets() {
 
                 console.log("###################################################");
                 console.log("load code snippets");
