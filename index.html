@@ -43,15 +43,17 @@
                         Display Ad
                     </h2>
                     <pre>
-                        <!-- Display Ad -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-7600374410956303"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"
-                            data-ad-slot="1694074948"></ins>
+                        <code>
+                            <!-- Display Ad -->
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-7600374410956303"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"
+                                data-ad-slot="1694074948"></ins>
+                        </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="auto" data-full-width-responsive="true" data-ad-slot="1694074948"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="auto" data-full-width-responsive="true" data-ad-slot="1694074948"></ins>
                 </div>
 
                 <div>
@@ -68,7 +70,7 @@
                             	data-ad-slot="2540252752"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="autorelaxed" data-ad-slot="2540252752"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="autorelaxed" data-ad-slot="2540252752"></ins>
                 </div>
 
                 <div>
@@ -86,7 +88,7 @@
                             	data-ad-slot="8233247344"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="8233247344"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block; text-align:center;" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="8233247344"></ins>
                 </div>
 
                 <div>
@@ -104,7 +106,7 @@
                             	data-ad-slot="5179838472"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-fg+5x+3m-c0+8k" data-ad-slot="5179838472"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-fg+5x+3m-c0+8k" data-ad-slot="5179838472"></ins>
                 </div>
 
                 <div>
@@ -122,7 +124,7 @@
                             	data-ad-slot="4247515279"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-fg+5x+3m-c0+8k" data-ad-slot="4247515279"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-fg+5x+3m-c0+8k" data-ad-slot="4247515279"></ins>
                 </div>
 
                 <div>
@@ -140,7 +142,7 @@
                             	data-ad-slot="9719333800"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2h-1m-4u" data-ad-slot="9719333800"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2h-1m-4u" data-ad-slot="9719333800"></ins>
                 </div>
 
                 <div>
@@ -158,7 +160,7 @@
                             	data-ad-slot="2032415472"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-ek+6j-34-9c+so" data-ad-slot="2032415472"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-ek+6j-34-9c+so" data-ad-slot="2032415472"></ins>
                 </div>
 
                 <div>
@@ -176,7 +178,7 @@
                             	data-ad-slot="4658578817"></ins>
                         </code>
                     </pre>
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-hh-7+2h-1m-4u" data-ad-slot="4658578817"></ins>
+                    <ins class="adsbygoogle actualad" style="display:block" data-ad-client="ca-pub-7600374410956303" data-ad-format="fluid" data-ad-layout-key="-hh-7+2h-1m-4u" data-ad-slot="4658578817"></ins>
                 </div>
 
             </section>
@@ -185,7 +187,10 @@
 
         <script>
             let googleAdElements = document.getElementsByClassName("adsbygoogle");
-            for (let elementIndex = 1; elementIndex < googleAdElements.length; elementIndex++) {
+            console.log("Ad Elements Count : " + googleAdElements.length);
+            let googleActualAdElements = googleAdElements.getElementsByClassName("actualad");
+            console.log("Actual Ad Elements Count : " + googleActualAdElements.length);
+            for (let elementIndex = 1; elementIndex < googleActualAdElements.length; elementIndex++) {
                 (adsbygoogle = window.adsbygoogle || []).push({});
             }
         </script>
