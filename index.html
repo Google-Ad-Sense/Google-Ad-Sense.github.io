@@ -188,10 +188,10 @@
         <script>
             let googleAdElements = document.getElementsByClassName("adsbygoogle");
             console.log("Ad Elements Count : " + googleAdElements.length);
-            let googleActualAdElements = googleAdElements.getElementsByClassName("actualad");
+            let googleActualAdElements = document.getElementsByClassName("actualad");
             console.log("Actual Ad Elements Count : " + googleActualAdElements.length);
             for (let elementIndex = 1; elementIndex < googleActualAdElements.length; elementIndex++) {
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.actualad || []).push({});
             }
         </script>
 
